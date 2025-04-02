@@ -83,6 +83,8 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
+            height: 450px;
+            justify-content: center;
         }
 
             .project:hover {
@@ -92,7 +94,8 @@
 
             .project img {
                 max-width: 100%;
-                height: auto;
+                max-height: 250px;
+                object-fit: cover;
                 margin-top: 1em;
                 border-radius: 8px;
             }
@@ -168,377 +171,105 @@
     </div>
 
     <script>
-    const projects = [
-      {
-        title: "Project 1",
-        subtitle: "Subtitle 1",
-        image: "https://via.placeholder.com/600x300",
-        videoId: "youtube_video_id_1",
-        description: "Description for Project 1."
-      },
-      {
-        title: "Project 2",
-        subtitle: "Subtitle 2",
-        image: "https://via.placeholder.com/600x300",
-        videoId: "youtube_video_id_2",
-        description: "Description for Project 2."
-      },
-      {
-        title: "Project 3",
-        subtitle: "Subtitle 3",
-        image: "https://via.placeholder.com/600x300",
-        videoId: "youtube_video_id_3",
-        description: "Description for Project 3."
-      },
-      {
-        title: "Project 4",
-        subtitle: "Subtitle 4",
-        image: "https://via.placeholder.com/600x300",
-        videoId: "youtube_video_id_4",
-        description: "Description for Project 4."
-      },
-      {
-        title: "Project 5",
-        subtitle: "Subtitle 5",
-        image: "https://via.placeholder.com/600x300",
-        videoId: "youtube_video_id_5",
-        description: "Description for Project 5."
-      },
-      {
-        title: "Project 6",
-        subtitle: "Subtitle 6",
-        image: "https://via.placeholder.com/600x300",
-        videoId: "youtube_video_id_6",
-        description: "Description for Project 6."
-      },
-      {
-        title: "Project 7",
-        subtitle: "Subtitle 7",
-        image: "https://via.placeholder.com/600x300",
-        videoId: "youtube_video_id_7",
-        description: "Description for Project 7."
-      },
-      {
-        title: "Project 8",
-        subtitle: "Subtitle 8",
-        image: "https://via.placeholder.com/600x300",
-        videoId: "youtube_video_id_8",
-        description: "Description for Project 8."
-      },
-      {
-        title: "Project 9",
-        subtitle: "Subtitle 9",
-        image: "https://via.placeholder.com/600x300",
-        videoId: "youtube_video_id_9",
-        description: "Description for Project 9."
-      },
-      {
-        title: "Project 10",
-        subtitle: "Subtitle 10",
-        image: "https://via.placeholder.com/600x300",
-        videoId: "youtube_video_id_10",
-        description: "Description for Project 10."
-      }
-    ];
-
-    const container = document.getElementById("projectContainer");
-
-    projects.forEach((project) => {
-      const div = document.createElement("div");
-      div.className = "project";
-      div.innerHTML = `
-        <div class="project-title">${project.title}</div>
-        <div class="project-subtitle">${project.subtitle}</div>
-        <img src="${project.image}" alt="${project.title}">
-      `;
-      div.onclick = () => openModal(project);
-      container.appendChild(div);
-    });
-
-    function openModal(project) {
-      document.getElementById("videoContainer").innerHTML = `
-        <iframe src="https://www.youtube.com/embed/${project.videoId}" frameborder="0" allowfullscreen></iframe>
-      `;
-      document.getElementById("projectDescription").innerText = project.description;
-      document.getElementById("modal").style.display = "flex";
-    }
-
-    function closeModal() {
-      document.getElementById("modal").style.display = "none";
-      document.getElementById("videoContainer").innerHTML = "";
-    }
-    </script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ginevra Turco Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Acumin+Variable+Concept&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Acumin Variable Concept', Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #000;
-            color: #fff;
-        }
-
-        header {
-            background: #000;
-            color: #fff;
-            padding: 3em 2em 2em 2em;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            position: relative;
-            border-bottom: 1px solid #444;
-        }
-
-            header h1 {
-                margin: 0;
-                font-size: 2.5em;
-                font-weight: 600;
+        const projects = [
+            {
+                title: "Project 1",
+                subtitle: "Subtitle 1",
+                image: "https://via.placeholder.com/600x337",
+                videoId: "youtube_video_id_1",
+                description: "Description for Project 1."
+            },
+            {
+                title: "Project 2",
+                subtitle: "Subtitle 2",
+                image: "https://via.placeholder.com/600x337",
+                videoId: "youtube_video_id_2",
+                description: "Description for Project 2."
+            },
+            {
+                title: "Project 3",
+                subtitle: "Subtitle 3",
+                image: "https://via.placeholder.com/600x337",
+                videoId: "youtube_video_id_3",
+                description: "Description for Project 3."
+            },
+            {
+                title: "Project 4",
+                subtitle: "Subtitle 4",
+                image: "https://via.placeholder.com/600x337",
+                videoId: "youtube_video_id_4",
+                description: "Description for Project 4."
+            },
+            {
+                title: "Project 5",
+                subtitle: "Subtitle 5",
+                image: "https://via.placeholder.com/600x337",
+                videoId: "youtube_video_id_5",
+                description: "Description for Project 5."
+            },
+            {
+                title: "Project 6",
+                subtitle: "Subtitle 6",
+                image: "https://via.placeholder.com/600x337",
+                videoId: "youtube_video_id_6",
+                description: "Description for Project 6."
+            },
+            {
+                title: "Project 7",
+                subtitle: "Subtitle 7",
+                image: "https://via.placeholder.com/600x337",
+                videoId: "youtube_video_id_7",
+                description: "Description for Project 7."
+            },
+            {
+                title: "Project 8",
+                subtitle: "Subtitle 8",
+                image: "https://via.placeholder.com/600x337",
+                videoId: "youtube_video_id_8",
+                description: "Description for Project 8."
+            },
+            {
+                title: "Project 9",
+                subtitle: "Subtitle 9",
+                image: "https://via.placeholder.com/600x337",
+                videoId: "youtube_video_id_9",
+                description: "Description for Project 9."
+            },
+            {
+                title: "Project 10",
+                subtitle: "Subtitle 10",
+                image: "https://via.placeholder.com/600x337",
+                videoId: "youtube_video_id_10",
+                description: "Description for Project 10."
             }
+        ];
 
-            header p {
-                font-size: 1.1em;
-                margin: 0.5em 0;
-                max-width: 600px;
-                text-align: center;
-            }
+        const container = document.getElementById("projectContainer");
 
-        .header-buttons {
-            position: absolute;
-            top: 1.5em;
-            right: 2em;
-            display: flex;
-            gap: 1em;
+        projects.forEach((project) => {
+            const div = document.createElement("div");
+            div.className = "project";
+            div.innerHTML = `
+            <div class="project-title">${project.title}</div>
+            <div class="project-subtitle">${project.subtitle}</div>
+            <img src="${project.image}" alt="${project.title}">
+          `;
+            div.onclick = () => openModal(project);
+            container.appendChild(div);
+        });
+
+        function openModal(project) {
+            document.getElementById("videoContainer").innerHTML = `
+            <iframe src="https://www.youtube.com/embed/${project.videoId}" frameborder="0" allowfullscreen></iframe>
+          `;
+            document.getElementById("projectDescription").innerText = project.description;
+            document.getElementById("modal").style.display = "flex";
         }
 
-            .header-buttons a {
-                text-decoration: none;
-                color: #000;
-                background-color: #c3fdfe;
-                padding: 0.4em 0.8em;
-                border-radius: 999px;
-                font-weight: bold;
-                font-size: 0.9em;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                transition: background 0.3s;
-            }
-
-                .header-buttons a:hover {
-                    background-color: #a8f2f5;
-                }
-
-        .container {
-            display: flex;
-            flex-direction: column;
-            gap: 2em;
-            padding: 2em;
+        function closeModal() {
+            document.getElementById("modal").style.display = "none";
+            document.getElementById("videoContainer").innerHTML = "";
         }
-
-        .project {
-            background: #111;
-            color: #fff;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(195,253,254,0.2);
-            padding: 2em;
-            cursor: pointer;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-
-            .project:hover {
-                transform: scale(1.01);
-                box-shadow: 0 6px 14px rgba(195,253,254,0.4);
-            }
-
-            .project img {
-                max-width: 100%;
-                height: auto;
-                margin-top: 1em;
-                border-radius: 8px;
-            }
-
-        .project-title {
-            font-size: 1.8em;
-            margin: 0.5em 0;
-        }
-
-        .project-subtitle {
-            font-size: 1em;
-            color: #c3fdfe;
-        }
-
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.9);
-            justify-content: center;
-            align-items: center;
-            z-index: 10;
-        }
-
-        .modal-content {
-            background: #111;
-            color: #fff;
-            padding: 2em;
-            max-width: 800px;
-            width: 90%;
-            border-radius: 10px;
-            position: relative;
-        }
-
-            .modal-content iframe {
-                width: 100%;
-                height: 400px;
-            }
-
-        .close {
-            position: absolute;
-            top: 10px;
-            right: 15px;
-            font-size: 1.5em;
-            cursor: pointer;
-            color: #c3fdfe;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <div class="header-buttons">
-            <a href="//drive.google.com/uc?export=download&id=1rEueSwzy02z8Gwf9VUpxu1PhY7zMDlXZ" download>CV</a>
-            <a href="mailto:ginevraturco@gmail.com">Email</a>
-        </div>
-        <h1>Ginevra Turco</h1>
-        <p>Creative Technologist.<br>I love to make things work and I make a lot of DIY projects just for fun.</p>
-    </header>
-
-    <div class="container" id="projectContainer">
-        <!-- Projects inserted here by JavaScript -->
-    </div>
-
-    <div class="modal" id="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <div id="videoContainer"></div>
-            <p id="projectDescription"></p>
-        </div>
-    </div>
-
-    <script>
-    const projects = [
-      {
-        title: "Project 1",
-        subtitle: "Subtitle 1",
-        image: "https://via.placeholder.com/600x300",
-        videoId: "youtube_video_id_1",
-        description: "Description for Project 1."
-      },
-      {
-        title: "Project 2",
-        subtitle: "Subtitle 2",
-        image: "https://via.placeholder.com/600x300",
-        videoId: "youtube_video_id_2",
-        description: "Description for Project 2."
-      },
-      {
-        title: "Project 3",
-        subtitle: "Subtitle 3",
-        image: "https://via.placeholder.com/600x300",
-        videoId: "youtube_video_id_3",
-        description: "Description for Project 3."
-      },
-      {
-        title: "Project 4",
-        subtitle: "Subtitle 4",
-        image: "https://via.placeholder.com/600x300",
-        videoId: "youtube_video_id_4",
-        description: "Description for Project 4."
-      },
-      {
-        title: "Project 5",
-        subtitle: "Subtitle 5",
-        image: "https://via.placeholder.com/600x300",
-        videoId: "youtube_video_id_5",
-        description: "Description for Project 5."
-      },
-      {
-        title: "Project 6",
-        subtitle: "Subtitle 6",
-        image: "https://via.placeholder.com/600x300",
-        videoId: "youtube_video_id_6",
-        description: "Description for Project 6."
-      },
-      {
-        title: "Project 7",
-        subtitle: "Subtitle 7",
-        image: "https://via.placeholder.com/600x300",
-        videoId: "youtube_video_id_7",
-        description: "Description for Project 7."
-      },
-      {
-        title: "Project 8",
-        subtitle: "Subtitle 8",
-        image: "https://via.placeholder.com/600x300",
-        videoId: "youtube_video_id_8",
-        description: "Description for Project 8."
-      },
-      {
-        title: "Project 9",
-        subtitle: "Subtitle 9",
-        image: "https://via.placeholder.com/600x300",
-        videoId: "youtube_video_id_9",
-        description: "Description for Project 9."
-      },
-      {
-        title: "Project 10",
-        subtitle: "Subtitle 10",
-        image: "https://via.placeholder.com/600x300",
-        videoId: "youtube_video_id_10",
-        description: "Description for Project 10."
-      }
-    ];
-
-    const container = document.getElementById("projectContainer");
-
-    projects.forEach((project) => {
-      const div = document.createElement("div");
-      div.className = "project";
-      div.innerHTML = `
-        <div class="project-title">${project.title}</div>
-        <div class="project-subtitle">${project.subtitle}</div>
-        <img src="${project.image}" alt="${project.title}">
-      `;
-      div.onclick = () => openModal(project);
-      container.appendChild(div);
-    });
-
-    function openModal(project) {
-      document.getElementById("videoContainer").innerHTML = `
-        <iframe src="https://www.youtube.com/embed/${project.videoId}" frameborder="0" allowfullscreen></iframe>
-      `;
-      document.getElementById("projectDescription").innerText = project.description;
-      document.getElementById("modal").style.display = "flex";
-    }
-
-    function closeModal() {
-      document.getElementById("modal").style.display = "none";
-      document.getElementById("videoContainer").innerHTML = "";
-    }
     </script>
 </body>
 </html>
