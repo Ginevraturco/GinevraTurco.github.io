@@ -77,13 +77,12 @@
             border-radius: 12px;
             box-shadow: 0 4px 10px rgba(195,253,254,0.2);
             padding: 2em;
-            cursor: pointer;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
-            height: 450px;
+            height: auto;
             justify-content: center;
         }
 
@@ -94,15 +93,16 @@
 
             .project img {
                 max-width: 100%;
-                max-height: 250px;
+                aspect-ratio: 16/9;
                 object-fit: cover;
                 margin-top: 1em;
                 border-radius: 8px;
+                cursor: pointer;
             }
 
         .project-title {
             font-size: 1.8em;
-            margin: 0.5em 0;
+            margin: 0.5em 0 0 0;
         }
 
         .project-subtitle {
@@ -158,9 +158,7 @@
         <p>Creative Technologist.<br>I love to make things work and I make a lot of DIY projects just for fun.</p>
     </header>
 
-    <div class="container" id="projectContainer">
-        <!-- Projects inserted here by JavaScript -->
-    </div>
+    <div class="container" id="projectContainer"></div>
 
     <div class="modal" id="modal">
         <div class="modal-content">
@@ -173,74 +171,74 @@
     <script>
         const projects = [
             {
-                title: "Project 1",
-                subtitle: "Subtitle 1",
-                image: "https://via.placeholder.com/600x337",
-                videoId: "youtube_video_id_1",
-                description: "Description for Project 1."
+                title: "EdenRed",
+                subtitle: "VR Interactive Installation",
+                image: "https://drive.google.com/uc?export=view&id=15hbgqpRlDH0wkSx60SvrByxXV8Rutx-9",
+                videoId: "KsSK2NZibq4",
+                description: "Interactive Installation made for an event in Garden Senato, Milan.\nUsed Unity for the VR experience.\n2023\nIn collaboration with Sesamo Lab"
             },
             {
-                title: "Project 2",
-                subtitle: "Subtitle 2",
-                image: "https://via.placeholder.com/600x337",
-                videoId: "youtube_video_id_2",
-                description: "Description for Project 2."
+                title: "IFFCO",
+                subtitle: "VR Interactive Installation",
+                image: "https://drive.google.com/uc?export=view&id=1a3sdzTdDUinkbicf8pQlI9ppMhnoCaKN",
+                videoId: "PKDzA9OeQt0",
+                description: "Interactive Installation made for IFFCO Global for an exposition at Gulfood in Dubai.\n2023\nIn collaboration with Sesamo Lab"
             },
             {
-                title: "Project 3",
-                subtitle: "Subtitle 3",
-                image: "https://via.placeholder.com/600x337",
-                videoId: "youtube_video_id_3",
-                description: "Description for Project 3."
+                title: "The Cloud",
+                subtitle: "VR Interactive Installation",
+                image: "https://drive.google.com/uc?export=view&id=1iFW3LbG8ILbdef_io9lBOUP5rbLQjf1W",
+                videoId: "V0LAVxYoVgY",
+                description: "Interactive Installation made for an event on the rooftop on The Cloud Milano.\nUsed TouchDesigner for realtime Music interaction and Unity for the VR experience.\n2022\nIn collaboration with Sesamo Lab"
             },
             {
-                title: "Project 4",
-                subtitle: "Subtitle 4",
-                image: "https://via.placeholder.com/600x337",
-                videoId: "youtube_video_id_4",
-                description: "Description for Project 4."
+                title: "Banque Saudi Fransi",
+                subtitle: "Metaverse",
+                image: "https://drive.google.com/uc?export=view&id=1CigfIKEYCBpXF3hkMOghJ8QjdgO-rsBI",
+                videoId: null,
+                description: "An auditorium in the middle of the desert, made using Blender, publicated on Spatial.io.\nMade for Banque Saudi Fransi in 2022.\nIn collaboration with Sesamo Lab.\nVisit: https://www.spatial.io/s/Final-Delivery_BSF-62e62e861c41e7000131356b?share=1457230732467882510"
             },
             {
-                title: "Project 5",
-                subtitle: "Subtitle 5",
-                image: "https://via.placeholder.com/600x337",
-                videoId: "youtube_video_id_5",
-                description: "Description for Project 5."
+                title: "Cowntdown",
+                subtitle: "Sensorial Interactive Installation",
+                image: "https://drive.google.com/uc?export=view&id=1nY5aoiyHtUey8DVGRktdrbgqlKAXilPv",
+                videoId: "IS2OHMd4Guw",
+                description: "COWNTDOWN is an interactive installation about intensive farming and the excess consumption of bovine meat.\nThe whole project has been realized by Ginevra Turco, Elena Ciuffreda, Giulia Mingucci and Marco Petrone during February-September 2021."
             },
             {
-                title: "Project 6",
-                subtitle: "Subtitle 6",
-                image: "https://via.placeholder.com/600x337",
-                videoId: "youtube_video_id_6",
-                description: "Description for Project 6."
+                title: "YesMilano",
+                subtitle: "Augmented Reality",
+                image: "https://drive.google.com/uc?export=view&id=1yNbQUneOZYjzcv4Gux_qCqefUK03Lq9-",
+                videoId: "O7FpNs11gV0",
+                description: "Augmented Reality prototype app made with Unity, winner of the \"Digital Design Marathon\" 2021, made for YESMilano."
             },
             {
-                title: "Project 7",
-                subtitle: "Subtitle 7",
-                image: "https://via.placeholder.com/600x337",
-                videoId: "youtube_video_id_7",
-                description: "Description for Project 7."
+                title: "7 Generations to Come",
+                subtitle: "Global Game Jam",
+                image: "https://drive.google.com/uc?export=view&id=1FoNcn4Rce0P5IUXKdIs_9ZZMBiFUDY10",
+                videoId: "0UeM3NNPT6w",
+                description: "Winner of the \"Best Tech\" price during Global Game Jam 2020. 7 Generation to come It's a game about the environment. Made with Unity."
             },
             {
-                title: "Project 8",
-                subtitle: "Subtitle 8",
-                image: "https://via.placeholder.com/600x337",
-                videoId: "youtube_video_id_8",
-                description: "Description for Project 8."
+                title: "Poirot",
+                subtitle: "Videogame",
+                image: "https://drive.google.com/uc?export=view&id=14rwMQ9EC9ZxkvEuxcPeJ0LqW1t9UdlZR",
+                videoId: null,
+                description: "Project Winner of Contest Future Cine Lab 2023 - in collaboration with Academia Terra.\nPlay: https://turcotex.itch.io/furto-sullorient-express-academia-terra"
             },
             {
-                title: "Project 9",
-                subtitle: "Subtitle 9",
-                image: "https://via.placeholder.com/600x337",
-                videoId: "youtube_video_id_9",
-                description: "Description for Project 9."
+                title: "Green Mission",
+                subtitle: "Arduino Co-Op Game Prototype",
+                image: "https://drive.google.com/uc?export=view&id=1z2ZqcSBe4l9eLyBclpsNcFnehh78GRgr",
+                videoId: "1G5H3mqykNs",
+                description: "Green Mission it's a multiplayer game controlled by Arduino and OSC. Made with Unity."
             },
             {
-                title: "Project 10",
-                subtitle: "Subtitle 10",
-                image: "https://via.placeholder.com/600x337",
-                videoId: "youtube_video_id_10",
-                description: "Description for Project 10."
+                title: "Squonkie",
+                subtitle: "Arduino Game Prototype",
+                image: "https://drive.google.com/uc?export=view&id=1UthrU3DCCF5e7pJrzEQk3YBRBUyNwSUL",
+                videoId: "7LH3DY0Wc54",
+                description: "Squonkie is a game controlled by Arduino. You can play it using the torch of your smartphone. Made with Unity."
             }
         ];
 
@@ -252,9 +250,9 @@
             div.innerHTML = `
             <div class="project-title">${project.title}</div>
             <div class="project-subtitle">${project.subtitle}</div>
-            <img src="${project.image}" alt="${project.title}">
+            <img src="${project.image}" alt="${project.title}" ${project.videoId ? 'onclick="openModal(projects[' + projects.indexOf(project) + '])"' : 'onclick="window.open(\'' + project.description.match(/https?:\/\/[^\s]+/g)?.[0] + '\')"'}>
           `;
-            div.onclick = () => openModal(project);
+            if (project.videoId) div.onclick = () => openModal(project);
             container.appendChild(div);
         });
 
